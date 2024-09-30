@@ -30,6 +30,12 @@ Copy the example env file and make the required configuration changes in the .en
   Please modify .env file with your local environment for DB and Mail service
 ```
 
+Optimize to refresh after adding new variable in .env
+
+```bash
+  php artisan optimize
+```
+
 Run this command to generate Laravel key
 
 ```bash
