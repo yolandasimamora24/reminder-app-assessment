@@ -13,7 +13,7 @@ Clone the repository
 Go to the project directory
 
 ```bash
-  cd portal
+  cd reminder-app-assessment
 ```
 
 Install all the dependencies using composer
