@@ -26,6 +26,8 @@ Copy the example env file and make the required configuration changes in the .en
 
 ```bash
   cp .env.example .env
+
+  Please modify .env file with your local environment for DB and Mail service
 ```
 
 Run this command to generate Laravel key
