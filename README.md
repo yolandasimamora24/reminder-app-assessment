@@ -28,10 +28,16 @@ Copy the example env file and make the required configuration changes in the .en
   cp .env.example .env
 ```
 
+Run this command to generate Laravel key
+
+```bash
+  php artisan key:generate
+```
+
 Run the database migrations
 
 ```bash
-  php artisan migrate
+  php artisan migrate --seed
 ```
 
 Start the local development server
