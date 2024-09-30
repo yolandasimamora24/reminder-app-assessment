@@ -1,0 +1,9 @@
+.spinner {
+    animation: spinner-a90wxe 1s infinite steps(8);
+}
+
+@keyframes spinner-a90wxe {
+    100% {
+        transform: rotate(1turn);
+    }
+}

@@ -1,0 +1,57 @@
+.tab-container label {
+    display: none;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+table {
+    border: 1px solid #d9e2ef;
+}
+
+.patient-detail-icon {
+    padding-right: 10px;
+    font-size: 20px;
+    top: 2px;
+    position: relative;
+    color: var(--primary);
+}
+
+.dashed-border-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: var(--gray-dark);
+    opacity: 0.8;
+    width: 90%;
+    min-height: 200px;
+    margin: 20px;
+    background-image: repeating-linear-gradient(45deg, #dadde2, #dadde2 10px, transparent 10px, transparent 20px), repeating-linear-gradient(135deg, #dadde2, #dadde2 10px, transparent 10px, transparent 20px), repeating-linear-gradient(225deg, #dadde2, #dadde2 10px, transparent 10px, transparent 20px), repeating-linear-gradient(315deg, #dadde2, #dadde2 10px, transparent 10px, transparent 20px);
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
+    background-repeat: no-repeat;
+}
+
+.dark-color-text {
+    color: #1b2a4e;
+}
+
+.primary-color-icon {
+    color: var(--primary);
+}
+
+#saveActions a {
+    display: none;
+}
+
+.tox-tinymce {
+    border: 1px solid #eee !important;
+    border-radius: 0 !important;
+}
+
+[data-bs-theme=light] div.tab-container ul li.nav-item .active {
+    color: #fff !important;
+    background-color:var(--tblr-tabler) !important;
+}
+

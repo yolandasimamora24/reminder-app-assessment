@@ -1,0 +1,10 @@
+{
+    "resources/css/theme/color-adjustment.css": "/resources/css/theme/color-adjustment.css",
+    "resources/css/theme/color.css": "/resources/css/theme/color.css",
+    "resources/css/theme/style.css": "/resources/css/theme/style.css",
+    "vendor/backpack/crud/src/resources/assets/css/common.css": "/vendor/backpack/crud/src/resources/assets/css/common.css",
+    "vendor/backpack/crud/src/resources/assets/img/spinner.svg": "/vendor/backpack/crud/src/resources/assets/img/spinner.svg",
+    "vendor/backpack/crud/src/resources/assets/js/common.js": "/vendor/backpack/crud/src/resources/assets/js/common.js",
+    "vendor/backpack/theme-tabler/resources/assets/css/style.css": "/vendor/backpack/theme-tabler/resources/assets/css/style.css",
+    "vendor/backpack/theme-tabler/resources/assets/js/tabler.js": "/vendor/backpack/theme-tabler/resources/assets/js/tabler.js"
+}

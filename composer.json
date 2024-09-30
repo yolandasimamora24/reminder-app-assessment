@@ -1,0 +1,102 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "backpack/basset": "^1.0",
+        "backpack/crud": "^6.1.12",
+        "backpack/editable-columns": "^3.0",
+        "backpack/permissionmanager": "^7.0",
+        "backpack/pro": "^2.0",
+        "backpack/theme-coreuiv2": "^1.1",
+        "backpack/theme-tabler": "^1.0",
+        "bensampo/laravel-enum": "^6.3",
+        "guzzlehttp/guzzle": "^7.2",
+        "intervention/image": "^2.7",
+        "laravel/fortify": "^1.17",
+        "laravel/framework": "^10.8",
+        "laravel/sanctum": "^3.2",
+        "laravel/tinker": "^2.8",
+        "mbezhanov/faker-provider-collection": "^2.0",
+        "sentry/sentry-laravel": "^3.8",
+        "spatie/laravel-permission": "^5.10"
+    },
+    "require-dev": {
+        "backpack/generators": "^4.0.2",
+        "fakerphp/faker": "^1.9.1",
+        "knuckleswtf/scribe": "^4.19",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.18",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^7.0",
+        "pestphp/pest": "^2.6",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "phpunit/phpunit": "^10.1",
+        "rakutentech/laravel-request-docs": "^2.19",
+        "spatie/laravel-ignition": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+        "files": [
+        ]
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "post-install-cmd": [
+            "php artisan storage:link --quiet"
+        ],
+        "test": [
+        "php artisan config:clear",
+        "pest"
+    ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": {
+        "backpack": {
+            "type": "composer",
+            "url": "https://repo.backpackforlaravel.com/"
+        }
+    }
+}

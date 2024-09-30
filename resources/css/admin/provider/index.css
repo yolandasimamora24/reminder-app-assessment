@@ -1,0 +1,16 @@
+.delete-element {
+    /* display: none; */
+}
+
+.offline {
+    background-color: rgb(127, 138, 130) !important;
+}
+
+.online {
+    background-color: #008000 !important;
+}
+
+.card.profile-progress {
+    border: 0;
+    box-shadow: unset;
+}

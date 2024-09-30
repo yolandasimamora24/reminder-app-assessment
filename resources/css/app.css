@@ -1,0 +1,101 @@
+/* .app-header.bg-light .navbar-brand {
+    opacity: 1;
+}
+
+.sidebar.sidebar-pills .nav-link.active, 
+.sidebar.sidebar-pills .nav-link:hover {
+    background-color: rgba(0,0,0,.02);
+    color: #0090ba!important;
+}
+
+.sidebar.sidebar-pills .nav-link.active .nav-icon, 
+.sidebar.sidebar-pills .nav-link:hover .nav-icon, 
+a, .text-primary {
+    color: #0090ba!important;
+}
+
+.btn-primary, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dropdown-item.active, 
+.dropdown-item:active {
+    background-color: #0090ba;
+    border-color: #0090ba;
+    color: #fff !important;
+}
+
+.btn-primary:hover, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: #3c5d67;
+    border-color: #3c5d67;
+}
+
+.page-item.active .page-link {
+    background-color: #0090ba;
+    border-color: #0090ba;
+    color: #fff !important;
+    z-index: 1;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, 
+.dataTables_wrapper .dataTables_length select:focus, 
+.form-control:focus {
+    background-color: #fff;
+    border-color: #0090ba;
+    box-shadow: 0 0 0 2px #0090ba36;
+    color: #495057;
+    outline: 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:not(:disabled):not(.disabled).active, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:not(:disabled):not(.disabled):active, 
+.dataTables_wrapper .dataTables_paginate .show>.dropdown-toggle.paginate_button.current, 
+.show>.btn-primary.dropdown-toggle {
+    background-color: #3c5d67 !important;
+    border-color: #3c5d67 !important;
+    color: #fff !important;
+}
+
+.pace .pace-progress {
+    background: #0090ba !important;
+    height: 2px;
+    position: fixed;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.user-avatar img {
+    height: 250px;
+}
+
+.btn-outline-primary {
+    color: #0090ba !important;
+    border-color: #0090ba !important;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, 
+.btn-outline-primary:not(:disabled):not(.disabled).active, 
+.show > .btn-outline-primary.dropdown-toggle, 
+.btn-outline-primary:hover {
+    color: #FFFFFF;
+    background-color: #3c5d67 !important;
+    border-color: #3c5d67 !important;
+} */
+
+.btn-success {
+    --tblr-btn-border-color: transparent;
+    --tblr-btn-hover-border-color: transparent;
+    --tblr-btn-active-border-color: transparent;
+    --tblr-btn-color: var(--tblr-success-fg);
+    --tblr-btn-bg: var(--tblr-success);
+    --tblr-btn-hover-color: var(--tblr-success-fg);
+    --tblr-btn-hover-bg: rgba(var(--tblr-success-rgb), .8);
+    --tblr-btn-active-color: var(--tblr-success-fg);
+    --tblr-btn-active-bg: rgba(var(--tblr-success-rgb), .8);
+    --tblr-btn-disabled-bg: var(--tblr-success);
+    --tblr-btn-disabled-color: var(--tblr-success-fg);
+    --tblr-btn-box-shadow: var(--tblr-shadow-button),var(--tblr-shadow-button-inset)
+}

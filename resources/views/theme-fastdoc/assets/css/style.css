@@ -1,0 +1,5 @@
+span.select2-selection.select2-selection--single,
+.select2-selection.select2-selection--multiple ul.select2-selection__rendered,
+.form-control {
+    border-radius: 10px !important;
+}
