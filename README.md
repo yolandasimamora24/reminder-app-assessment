@@ -54,9 +54,7 @@ Screenshots:
 
 1. Login Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 32 05" src="https://github.com/user-attachments/assets/c7c1d5fd-2c7d-44db-b5bb-1d73d767cbcf">
-
-
-
+<br>
 2. Dashboard Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 01" src="https://github.com/user-attachments/assets/0cd99b11-6731-47f4-9c1c-c6315b072a05">
 
