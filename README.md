@@ -89,7 +89,7 @@ Screenshots:
 <img width="1440" alt="Screenshot 2024-09-30 at 14 35 27" src="https://github.com/user-attachments/assets/de6050d2-5832-48d4-8ee0-8c4083a7bdce">
 
 11. Email reminder result with prefix on email subject.
-<img width="1440" alt="Screenshot 2024-09-30 at 14 59 03" src="https://github.com/user-attachments/assets/ef24c77d-847b-4446-beb9-16534e7f9fd2">
+<img width="1440" alt="Screenshot 2024-09-30 at 17 24 20" src="https://github.com/user-attachments/assets/7ac5f04f-d3d2-4929-a795-9bc0faad1f47">
 
 
 ### License
