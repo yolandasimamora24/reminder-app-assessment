@@ -47,6 +47,12 @@ Start the local development server
 ```bash
   php artisan serve
 ```
+
+Test sending email with running this command
+
+```bash
+  php artisan app:send-email
+```
 You can now access the server at http://localhost:8000/admin/login
 
 
