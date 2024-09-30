@@ -116,6 +116,23 @@ class ReminderCrudController extends CrudController
         $this->setupCreateUpdateOperation();
     }
 
+    // show whatever you want
+    protected function setupShowOperation()
+    {
+        CRUD::addColumn([
+            'name' => 'email',
+            'type' => 'text',
+            'label' => 'Email',
+            'value' => function ($entry) {
+                return $entry->user->email;
+            }
+        ]);
+
+        // automatically add the columns
+        $this->autoSetupShowOperation();
+
+    }
+
     /**
      * Define what happens when the Create operation is loaded.
      *
@@ -147,7 +164,7 @@ class ReminderCrudController extends CrudController
 
         CRUD::addField([
             'type' => 'relationship',
-            'name' => 'user_id',
+            'name' => 'email',
             'label' => 'User',
             'ajax' => true,
             'model' => 'App\Models\User',
