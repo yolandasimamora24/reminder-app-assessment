@@ -63,6 +63,7 @@ Screenshot:
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 40" src="https://github.com/user-attachments/assets/f33d4be3-569c-43b5-9080-79551c2fd746">
 <img width="1440" alt="Screenshot 2024-09-30 at 14 35 08" src="https://github.com/user-attachments/assets/ff8c0834-e30a-4066-ae73-07c7fa29eab1">
 <img width="1440" alt="Screenshot 2024-09-30 at 14 35 27" src="https://github.com/user-attachments/assets/de6050d2-5832-48d4-8ee0-8c4083a7bdce">
+<img width="1440" alt="Screenshot 2024-09-30 at 14 59 03" src="https://github.com/user-attachments/assets/ef24c77d-847b-4446-beb9-16534e7f9fd2">
 
 
 ### License
