@@ -21,3 +21,4 @@ yarn-error.log
 _ide_helper*
 .phpstorm.meta.php
 auth.json
+storage

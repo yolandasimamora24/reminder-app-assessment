@@ -32,9 +32,6 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
     Route::get('/', 'DashboardController@redirect')->name('backpack');
-    // Route::get('dashboard', 'DashboardController@dashboard')->name('dashboard');
-    // Route::get('dashboard/stats', 'DashboardController@getStats');
-    // Route::get('dashboard/events', 'DashboardController@getCalendarEvents');
     Route::crud('user', 'UserCrudController');
     Route::get('user/{id}/change-password', 'UserCrudController@setupChangePasswordView');
     Route::post('user/{id}/reset-password', 'UserCrudController@resetPassword')->name('reset.password');
@@ -42,6 +39,7 @@ Route::group([
     Route::get('/get_users', 'MessageController@getUsers');
     Route::get('/get_messages', 'MessageController@getMessages');
     Route::post('notifications', 'MessageController@sendMail');
+    
 });
 
 Route::group([

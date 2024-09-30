@@ -2,65 +2,72 @@
 
 namespace App\Mail;
 
-use App\Models\Reminder;
-use Exception;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Address;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Str;
 
-class ReminderMail extends Mailable implements ShouldQueue
+class ReminderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected string $access_token;
+    protected $reminder;
+    protected $user;
+
+    public function __construct($user, $reminder)
+    {
+        $this->user = $user;
+        $this->reminder = $reminder;
+    }
 
     /**
-     * Create a new message instance.
+     * Get the email
+     */
+    public function email(): string
+    {
+        return Str::title($this->user->email);
+    }
+
+    /**
+     * Get the prefix
+     */
+    public function prefix(): string
+    {
+        return Str::title($this->reminder->prefix);
+    }
+
+    /**
+     * Get the description
+     */
+    public function description(): string
+    {
+        return Str::title($this->reminder->description);
+    }
+
+    /**
+     * Get the reminder_date
+     */
+    public function reminder_date(): string
+    {
+        return Str::title($this->reminder->reminder_date);
+    }
+
+    /**
+     * Build the message.
      *
-     * @throws Exception
+     * @return $this
      */
-    public function __construct(protected Reminder $reminder)
+    public function build()
     {
-        $this->access_token = $this->generateAccessToken();
-    }
-
-    /**
-     * Get the message envelope.
-     */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            from: new Address('reminder@app.com', 'Reminder App'),
-            replyTo: [
-                new Address('reminder@app.com', 'Reminder App'),
-            ],
-            subject: 'Reminder App '.$this->reminder->prefix,
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'emails.reminder_email',
-            with: [
-                'description' => $this->reminder->description,
-                'timestamp' => strtotime('now'),
-            ],
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     */
-    public function attachments(): array
-    {
-        return [];
+        return $this->markdown('emails.reminder_email')
+                    ->subject($this->reminder->prefix)
+                    ->from('reminder@app.com', 'Reminder App')
+                    ->with([
+                        'email'=> $this->email(),
+                        'prefix' => $this->prefix(),
+                        'description' => $this->description(),
+                        'reminder_date' => $this->reminder_date(),
+                    ]);
     }
 }

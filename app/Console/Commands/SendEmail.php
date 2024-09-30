@@ -8,6 +8,7 @@ use App\Jobs\SendMailJob;
 use App\Mail\ReminderMail;
 use App\Models\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Mail;
 
 class SendEmail extends Command
 {
@@ -31,22 +32,20 @@ class SendEmail extends Command
     public function handle()
     {
         //One hour is added to compensate for PHP being one hour faster 
-        $now = date("Y-m-d H:i", strtotime(Carbon::now()->addHour()));
-        logger($now);
+        $now = date("Y-m-d H:i", timestamp: strtotime(Carbon::now()->addHour()));
+        logger($now);  
 
         $reminders = Reminder::get();
         if($reminders !== null){
             //Get all messages that their dispatch date is due
-            $reminders->where('date_string',  $now)->each(function($reminder) {
+            $reminders->where('reminder_date',  $now)->each(function($reminder) {
                     $users = User::all();
                     foreach($users as $user) {
-                        dispatch(new SendMailJob(
-                            $user->email, 
-                            new ReminderMail($user, $reminder))
+                        dispatch(
+                            Mail::to($user->email)->send(new ReminderMail($user, $reminder))
                         );
                     }
                     $reminder->save();   
-                
             });
         }
     }

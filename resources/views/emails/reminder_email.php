@@ -194,13 +194,12 @@
                                         <tr>
                                             <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:40px 30px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
                                                 <div class="v-text-align" style="color: #333333; line-height: 140%; text-align: left; word-wrap: break-word;">
-                                                    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><strong><span style="font-size: 22px; line-height: 30.8px;">Hello {{ $name }},</span></strong></span></p>
+                                                    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><strong><span style="font-size: 22px; line-height: 30.8px;">{{ $prefix }},</span></strong></span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
-                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">A new user has been added and is awaiting your approval. Please review the details below:</span></span></p>
+                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">A kind reminder for you:</span></span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
-                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Name : {{ $pendingUserName }}</span></span></p>
-                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Email : {{ $pendingUserEmail }}</span></span></p>
-                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Department : {{ $pendingUserDepartment }}</span></span></p>
+                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Description : {{ $description }}</span></span></p>
+                                                    <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Reminder Date : {{ $reminder_date }}</span></span></p>
                                                 </div>
                                             </td>
                                         </tr>
@@ -222,14 +221,10 @@
                                         <tr>
                                             <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px 40px 30px;font-family:arial,helvetica,sans-serif;" align="left">
                                                 <div class="v-text-align" align="left">
-                                                    <a href="{{ $approve_url }}" target="_blank" class="v-size-width" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #ffffff; background-color: #048cbc; border-radius: 3px;-webkit-border-radius: 3px; -moz-border-radius: 3px; width:100%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-color: #048cbc; border-top-style: solid; border-top-width: 3px; border-left-color: #048cbc; border-left-style: solid; border-left-width: 3px; border-right-color: #048cbc; border-right-style: solid; border-right-width: 3px; border-bottom-color: #048cbc; border-bottom-style: solid; border-bottom-width: 3px;">
-                                                        <span class="v-padding" style="display:block;padding:15px 40px;line-height:120%;"><span style="font-size: 20px; line-height: 24px; font-family: helvetica, sans-serif;"><strong><span style="line-height: 24px; font-size: 20px;">Approve User Now</span></strong></span></span>
+                                                    <a href="" target="_blank" class="v-size-width" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #ffffff; background-color: #048cbc; border-radius: 3px;-webkit-border-radius: 3px; -moz-border-radius: 3px; width:100%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-color: #048cbc; border-top-style: solid; border-top-width: 3px; border-left-color: #048cbc; border-left-style: solid; border-left-width: 3px; border-right-color: #048cbc; border-right-style: solid; border-right-width: 3px; border-bottom-color: #048cbc; border-bottom-style: solid; border-bottom-width: 3px;">
+                                                        <span class="v-padding" style="display:block;padding:15px 40px;line-height:120%;"><span style="font-size: 20px; line-height: 24px; font-family: helvetica, sans-serif;"><strong><span style="line-height: 24px; font-size: 20px;">Back to Reminder App</span></strong></span></span>
                                                     </a>
                                                     <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
-                                                </div>
-
-                                                <div class="v-text-align" style="color: #333333; line-height: 140%; text-align: center; word-wrap: break-word;">
-                                                    <p style="line-height: 140%; font-size: 14px;margin-top: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">Alternatively, you can review and manage all pending users by clicking <a href="{{ $url }}" target="_blank" >here</a>.</span></span></p>
                                                 </div>
                                             </td>
                                         </tr>
@@ -259,26 +254,6 @@
                                         <tbody>
                                         <tr>
                                             <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:40px;font-family:arial,helvetica,sans-serif;" align="left">
-
-                                                <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 0px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                                    <tbody>
-                                                    <tr style="vertical-align: top">
-                                                        <td style="text-align:center;color:rgba(255,255,255,1);word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 16px;line-height: 20px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                                            <b>{{ $company_name }}</b>
-                                                        </td>
-                                                    </tr>
-                                                    <tr style="vertical-align: top">
-                                                        <td style="text-align:center;color:rgba(255,255,255,1);word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 12px;line-height: 20px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                                            <span>{{ $company_address }}</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr style="vertical-align: top">
-                                                        <td style="text-align:center;color:rgba(255,255,255,0.75);word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 12px;line-height: 20px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
-                                                            <span># {{ $timestamp }}</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
 
                                             </td>
                                         </tr>

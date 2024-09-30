@@ -32,26 +32,18 @@ class SendEmailController extends Controller
         $message->save();
 
         if($request->item == "now") {
-
             $message->delivered = 'YES';
             $message->send_date = Carbon::now();
             $message->save();   
-
             $users = User::all();
-
             foreach($users as $user) {
                 dispatch(new SendMailJob($user->email, new ResultMail($user, $message)));
             }
-                
             return response()->json('Mail sent.', 201);
-
         } else { 
-
             $message->date_string = date("Y-m-d H:i", strtotime($request->send_date));
-
             $message->save();   
-
-            return response()->json('Notification will be sent later.', 201);
+            return response()->json('Mail will be sent later.', 201);
         }
     }
 }
