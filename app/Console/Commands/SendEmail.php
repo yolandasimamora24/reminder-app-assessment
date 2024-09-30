@@ -45,6 +45,7 @@ class SendEmail extends Command
                             Mail::to($user->email)->send(new ReminderMail($user, $reminder))
                         );
                     }
+                    $reminder->status = 'completed';
                     $reminder->save();   
             });
         }

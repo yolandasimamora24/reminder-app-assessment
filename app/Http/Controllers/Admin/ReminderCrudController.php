@@ -209,22 +209,24 @@ class ReminderCrudController extends CrudController
         $start = Carbon::now();
         $end = Carbon::now()->endOfDay();
 
-        $startLastWeek = $end->copy()->subWeek()->startOfWeek();
-        $endLastWeek = $end->copy()->subWeek()->endOfWeek();
+        $startLastWeek = $end->copy()->subWeek()->startOfDay();
+        $endLastWeek = $end->copy()->subWeek()->endOfDay();
 
         $reminder = Reminder::all();
         $reminderTotal = $reminder->count();
-        $reminderNew = $reminder->whereBetween('created_at', [$startLastWeek, $endLastWeek])->count();
+        $reminderNew = $reminder->whereBetween('reminder_date', [$startLastWeek, $endLastWeek])->count();
         $reminderPercentage = ($reminderTotal > 0) ? ($reminderNew / $reminderTotal) * 100 : 0;
 
-        $completedPercentage = $reminder->whereBetween('created_at', [$startLastWeek, $endLastWeek])->count();
-        $completedPercentage = ($reminderTotal > 0) ? ($completedPercentage / $reminderTotal) * 100 : 0;
+        $reminderCompletedTotal = $reminder->where('status', 'completed')->count();
+        $completedPercentage = $reminder->whereBetween('reminder_date', [$startLastWeek, $endLastWeek])->where('status', 'completed')->count();
+        $completedPercentage = ($reminderTotal > 0  && $completedPercentage > 0) ? ($completedPercentage / $reminderCompletedTotal) * 100 : 0;
 
-        $pendingPercentage = $reminder->whereBetween('created_at', [$startLastWeek, $endLastWeek])->count();
-        $pendingPercentage = ($reminderTotal > 0) ? ($pendingPercentage / $reminderTotal) * 100 : 0;
-
+        $reminderPendingTotal = $reminder->where('status', 'pending')->count();
+        $pendingPercentage = $reminder->whereBetween('reminder_date', [$startLastWeek, $endLastWeek])->where('status', 'pending')->count();
+        $pendingPercentage = ($reminderTotal > 0) ? ($pendingPercentage / $reminderPendingTotal) * 100 : 0;
+        
         return [
-            'Total' => ['count' => $total_count, 'icon' => 'la-notes-medical', 'count_percentage' => $reminderPercentage],
+            'Total' => ['count' => $total_count, 'icon' => 'la-notes-total', 'count_percentage' => $reminderPercentage],
             'Completed' => ['count' => $completed_count, 'icon' => 'la-check', 'count_percentage' => $completedPercentage],
             'Pending' => ['count' => $pending_count, 'icon' => 'la-exclamation-circle', 'count_percentage' => $pendingPercentage],
         ];

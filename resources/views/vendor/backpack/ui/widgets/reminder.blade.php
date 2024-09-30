@@ -15,13 +15,6 @@
                                         </div>
                                     </div>
                                     <h1 class="mt-1 mb-3 total-count">{{ $data['count'] }}</h1>
-                                    <div class="mb-0">
-                                        <span class="text-{{ $data['count'] > 0 ? 'success' : 'danger' }} percentage">
-                                            <i class="mdi mdi-arrow-bottom-right"></i>
-                                            {{ round( $data['count_percentage'], 2) }}%
-                                        </span>
-                                        <span class="text-muted">Since last week</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
