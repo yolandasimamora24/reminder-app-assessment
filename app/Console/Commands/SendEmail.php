@@ -38,11 +38,11 @@ class SendEmail extends Command
         $reminders = Reminder::get();
         if($reminders !== null){
             //Get all messages that their dispatch date is due
-            $reminders->where('reminder_date',  $now)->each(function($reminder) {
+            $reminders->each(function($reminder) {
                     $users = User::all();
                     foreach($users as $user) {
                         dispatch(
-                            Mail::to($user->email)->send(new ReminderMail($user, $reminder))
+                            Mail::to($user->email)->send(new ReminderMail($user->email, $reminder->prefix, $reminder->description, $reminder->reminder_date, $user, $reminder))
                         );
                     }
                     $reminder->status = 'completed';

@@ -12,11 +12,23 @@ class ReminderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $reminder;
+    protected $email;
+    protected $prefix;
+    protected $description;
+    protected $reminder_date;
     protected $user;
-
-    public function __construct($user, $reminder)
+    protected $reminder;
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct($email, $prefix, $description, $reminder_date, $user, $reminder)
     {
+        $this->email = $email;
+        $this->prefix = $prefix;
+        $this->description = $description;
+        $this->reminder_date = $reminder_date;
         $this->user = $user;
         $this->reminder = $reminder;
     }
@@ -24,7 +36,7 @@ class ReminderMail extends Mailable
     /**
      * Get the email
      */
-    public function email(): string
+    public function getEmail(): string
     {
         return Str::title($this->user->email);
     }
@@ -32,7 +44,7 @@ class ReminderMail extends Mailable
     /**
      * Get the prefix
      */
-    public function prefix(): string
+    public function getPrefix(): string
     {
         return Str::title($this->reminder->prefix);
     }
@@ -40,7 +52,7 @@ class ReminderMail extends Mailable
     /**
      * Get the description
      */
-    public function description(): string
+    public function getDescription(): string
     {
         return Str::title($this->reminder->description);
     }
@@ -48,7 +60,7 @@ class ReminderMail extends Mailable
     /**
      * Get the reminder_date
      */
-    public function reminder_date(): string
+    public function getReminderDate(): string
     {
         return Str::title($this->reminder->reminder_date);
     }
@@ -64,10 +76,9 @@ class ReminderMail extends Mailable
                     ->subject($this->reminder->prefix)
                     ->from('reminder@app.com', 'Reminder App')
                     ->with([
-                        'email'=> $this->email(),
-                        'prefix' => $this->prefix(),
-                        'description' => $this->description(),
-                        'reminder_date' => $this->reminder_date(),
+                        'email'=> $this->email,
+                        'description'=> $this->description,
+                        'reminder_date'=> $this->reminder_date,
                     ]);
     }
 }

@@ -30,6 +30,7 @@ class ReminderFactory extends Factory
         return [
             'user_id' => User::factory(),
             'prefix' => fake()->sentence(),
+            'description' => fake()->sentence(),
             'reminder_date' => Helper::getRandomDate(),
         ];
     }

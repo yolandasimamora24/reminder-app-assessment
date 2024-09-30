@@ -194,7 +194,7 @@
                                         <tr>
                                             <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:40px 30px 10px 40px;font-family:arial,helvetica,sans-serif;" align="left">
                                                 <div class="v-text-align" style="color: #333333; line-height: 140%; text-align: left; word-wrap: break-word;">
-                                                    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><strong><span style="font-size: 22px; line-height: 30.8px;">{{ $prefix }},</span></strong></span></p>
+                                                    <p style="font-size: 14px; line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><strong><span style="font-size: 22px; line-height: 30.8px;">Hi {{ $email }},</span></strong></span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
                                                     <p style="line-height: 140%; font-size: 14px;"><span style="font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 19.6px;"><span style="font-size: 16px; line-height: 25.2px;">A kind reminder for you:</span></span></p>
                                                     <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
