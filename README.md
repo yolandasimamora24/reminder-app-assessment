@@ -51,18 +51,26 @@ You can now access the server at http://localhost:8000/admin/login
 
 
 Screenshots:
-```bash
+
 1. Login Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 32 05" src="https://github.com/user-attachments/assets/c7c1d5fd-2c7d-44db-b5bb-1d73d767cbcf">
-```
+
+
+
 2. Dashboard Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 01" src="https://github.com/user-attachments/assets/0cd99b11-6731-47f4-9c1c-c6315b072a05">
+
+
 
 3. User List Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 09" src="https://github.com/user-attachments/assets/4ab05119-39ae-4209-851a-f389cebf4958">
 
+
+
 4. Add User Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 15" src="https://github.com/user-attachments/assets/bfa721ce-ca36-416f-bf27-ea0288ca2372">
+
+
 
 5. Edit User Page
 <img width="1440" alt="Screenshot 2024-09-30 at 14 34 23" src="https://github.com/user-attachments/assets/2e19f150-bbf3-4f36-af3a-6b3c0562b498">
