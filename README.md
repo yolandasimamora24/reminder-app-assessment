@@ -1,6 +1,6 @@
 
 # Event Reminder App
-A laravel-based Web Application and API for Event Reminder App.
+A laravel-based Web Application for Event Reminder App.
 
 ### Setup Locally
 
